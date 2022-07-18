@@ -1,0 +1,596 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FilterExcel" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="648,1780" sap2010:WorkflowViewState.IdRef="FilterExcel_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Activities.Business.Filter</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="FilterExcel" sap:VirtualizedContainerService.HintSize="560,1715" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Process" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_FilterProcess" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="518,1623" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="476,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Recolhendo informações do excel&quot;]" />
+      <ui:ReadRange AddHeaders="True" DataTable="[dt_Process]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="476,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="SDGrRelatorioAcompanhamentoWork" WorkbookPath="C:\Users\andrade_cicero\Downloads\SDGrRelatorioAcompanhamentoWorkflow.xlsx">
+        <ui:ReadRange.Range>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </ui:ReadRange.Range>
+      </ui:ReadRange>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="343,277" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:RemoveDataRow Row="{x:Null}" DataTable="[dt_Process]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="301,185" sap2010:WorkflowViewState.IdRef="RemoveDataRow_5" RowIndex="0" />
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="476,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Excluindo a primeira linha&quot;]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WriteRange AddHeaders="False" DataTable="[dt_Process]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet1" WorkbookPath="dt_process.xlsx">
+              <ui:WriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:WriteRange.StartingCell>
+            </ui:WriteRange>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange AddHeaders="True" DataTable="[dt_Process]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="dt_process.xlsx">
+              <ui:ReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ReadRange.Range>
+            </ui:ReadRange>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,869" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="dt_FilterActivity" />
+          <Variable x:TypeArguments="x:String" Name="Process" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Filtrando informações&quot;]" />
+        <ui:FilterDataTable DataTable="[dt_Process]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FilterProcess]" SelectColumnsMode="Keep">
+          <ui:FilterDataTable.Filters>
+            <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+              <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Data de Término"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["                   "]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">[" Usuário da Solicitação"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">[" CONFEDERAÇÃO DAS COOPERATIVAS DO SICREDI"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">[" Data de Início"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">[DateAdd("d", -1, Now).ToString("dd/MM/yyyy")]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">[" Data de Início"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">[Now.ToString("dd/MM/yyyy")]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+            </scg:List>
+          </ui:FilterDataTable.Filters>
+          <ui:FilterDataTable.SelectColumns>
+            <scg:List x:TypeArguments="InArgument" Capacity="8">
+              <InArgument x:TypeArguments="x:String">[" Usuário da Solicitação"]</InArgument>
+              <InArgument x:TypeArguments="x:String">[" Processo"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Nome / Razão Social"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Grupo / Cota"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Situação"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+              <InArgument x:TypeArguments="x:String">[" Data de Início"]</InArgument>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["Número do  Processo"]</InArgument>
+            </scg:List>
+          </ui:FilterDataTable.SelectColumns>
+        </ui:FilterDataTable>
+        <ui:FilterDataTable DataTable="[dt_FilterProcess]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_FilterActivity]" SelectColumnsMode="Keep">
+          <ui:FilterDataTable.Filters>
+            <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="64">
+              <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["AJUSTAR DOCUMENTAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["AJUSTAR DOCUMENTAÇÃO DA VISTORIA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["AJUSTAR DOCUMENTOS P/ ALIENAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["APROVAÇÃO TRANSFERÊNCIA - CESSIONÁRIO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["APROVAR DOCUMENTOS - CESSIONÁRIO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["CANCELAMENTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["DISPONIBILIZAR DOCUMENTOS PARA O CESSIONÁRIO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["DISPONIBILIZAR DOCUMENTOS PARA O CONSORCIADO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["EMISSÃO DE TAXA DO PROCESSO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["EMISSÃO DO ADITAMENTO AO CONTRATO - CESSIONÁRIO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["EMISSÃO DO CONTRATO DE ALIENAÇÃO - CESSIONÁRIO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["EMITIR CONTRATO DE ALIENAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["EMITIR DOCUMENTOS PARA LIBERAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["EMITIR TERMO - CEDENTE"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["ENVIAR DE DOCUMENTOS"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["ENVIAR DOCUMENTOS"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["ENVIAR DOCUMENTOS - CESSIONÁRIO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["ENVIAR DOCUMENTOS 1° ETAPA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["ENVIAR DOCUMENTOS PARA LIBERAÇÃO 2° ETAPA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REALIZAR AJUSTES DOCUMENTOS DO PAGAMENTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REALIZAR AJUSTES P/ FORMALISTICA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REALIZAR AJUSTES PARA FORMALISTICA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REALIZAR AJUSTES SOLICITADOS PELO JURIDICO - COOPERATIVA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAÇÃO DOCUMENTOS ALIENÁVEL"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCS DE PAGAMENTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCS INICIAIS "]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTAÇÃO P/ INSTRUMENTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS 2° ETAPA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS 2ª ETAPA ALIENÁVEL"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS ANALISE"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS ANALISE 2"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS DE LIBERAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS DE PAGAMENTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS INICIAIS"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS INICIAS"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTOS PARA ALIENAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["TERMO DE TRANSFERÊNCIA - CEDENTE"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR INFORMAÇÕES DO AGENDAMENTO DA VISTORIA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["AJUSTAR FORMA DE LIBERAÇÃO/DOCUMENTAÇÃO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["AJUSTAR FORMA DE LIBERAÇÃO / DOCUMENTAÇÃO OBRA"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REALIZAR AJUSTES DOCS PAGTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+              <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                <ui:FilterOperationArgument.Column>
+                  <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+                </ui:FilterOperationArgument.Column>
+                <ui:FilterOperationArgument.Operand>
+                  <InArgument x:TypeArguments="x:String">["REGULARIZAR DOCUMENTAÇÃO PARA INSTRUMENTO"]</InArgument>
+                </ui:FilterOperationArgument.Operand>
+              </ui:FilterOperationArgument>
+            </scg:List>
+          </ui:FilterDataTable.Filters>
+          <ui:FilterDataTable.SelectColumns>
+            <scg:List x:TypeArguments="InArgument" Capacity="8">
+              <InArgument x:TypeArguments="x:String">[" Usuário da Solicitação"]</InArgument>
+              <InArgument x:TypeArguments="x:String">[" Processo"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Nome / Razão Social"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Grupo / Cota"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Situação"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Atividade"]</InArgument>
+              <InArgument x:TypeArguments="x:String">[" Data de Início"]</InArgument>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["Número do  Processo"]</InArgument>
+            </scg:List>
+          </ui:FilterDataTable.SelectColumns>
+        </ui:FilterDataTable>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Salvando informações filtradas&quot;]" />
+        <ui:WriteRange AddHeaders="True" DataTable="[dt_FilterActivity]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="FilteredProcess.xlsx">
+          <ui:WriteRange.StartingCell>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ui:WriteRange.StartingCell>
+        </ui:WriteRange>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>
