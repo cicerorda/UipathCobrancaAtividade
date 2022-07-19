@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AccessWTS_GetExcel" sap:VirtualizedContainerService.HintSize="722,7238" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AccessWTS_GetExcel" sap:VirtualizedContainerService.HintSize="648,7198" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -82,7 +82,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="476,7173" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="476,7133" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Ci15ro04an99&amp;" Name="Password" />
     </Sequence.Variables>
@@ -132,7 +132,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (709,343,324,43)&quot; +&#xD;&#xA;&quot;Anchor: Button (881,399,153,37)&quot; +&#xD;&#xA;&quot;Anchor: InputBox (712,289,321,42)&quot;]" DesignTimeCacheId="f9b2de92-97f9-401e-a908-184175d71534" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="05336ef57c99bd68a43a6c2d181d4124" Text="[Password]" Version="V5">
+            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (709,343,324,43)&quot; +&#xA;&quot;Anchor: Button (881,399,153,37)&quot; +&#xA;&quot;Anchor: InputBox (712,289,321,42)&quot;]" DesignTimeCacheId="f9b2de92-97f9-401e-a908-184175d71534" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="05336ef57c99bd68a43a6c2d181d4124" Text="[Password]" Version="V5">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="a5ee04ef-13b6-4ff6-bd2e-122b498a0031">
                   <uc:CvDescriptor.Anchors>
@@ -157,7 +157,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (881,399,153,37)&quot; +&#xD;&#xA;&quot;Anchor: InputBox (709,343,324,43)&quot; +&#xD;&#xA;&quot;Anchor: InputBox (712,289,321,42)&quot;]" DesignTimeCacheId="f9b2de92-97f9-401e-a908-184175d71534" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="893c1842fee567fa2f67473abd5408f4" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (881,399,153,37)&quot; +&#xA;&quot;Anchor: InputBox (709,343,324,43)&quot; +&#xA;&quot;Anchor: InputBox (712,289,321,42)&quot;]" DesignTimeCacheId="f9b2de92-97f9-401e-a908-184175d71534" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="893c1842fee567fa2f67473abd5408f4" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -475,7 +475,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (766,224,338,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Busca rapida (Ctrl+E)' (787,229,104,13)&quot;]" DesignTimeCacheId="4d219003-0c42-4a87-b3b0-52106dc42636" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="f1d65ea04704398257cbc9371bdfd2d1" Text="[&quot;wo&quot;]" Version="V5">
+            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (766,224,338,24)&quot; +&#xA;&quot;Anchor: Text 'Busca rapida (Ctrl+E)' (787,229,104,13)&quot;]" DesignTimeCacheId="4d219003-0c42-4a87-b3b0-52106dc42636" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="f1d65ea04704398257cbc9371bdfd2d1" Text="[&quot;wo&quot;]" Version="V5">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="183878d2-7458-4310-b237-99cd56417a4f">
                   <uc:CvDescriptor.Anchors>
@@ -531,10 +531,13 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="8">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
               <uc:CVCache DisplayName="1" Id="e53d0998-7c33-4c42-b532-2ec89d6f0385" InformativeScreenshot="bc1d54d2dc27d582e8548eb4dc20f631" LogicalPosition="-2806, 0" OcrText="NewCon = X Nev CON Venda Grupo Cobranca Financeiro Contemplacao Credito Encerramento Contabilidade Sistema Atendimento Sair Acesso Rapido Escolha da Empresa Busca rapida (Ctrl+E) v Empresa &gt; ADMINISTRADORA DE CONSORCIOS SICREDI LTDA Avisos Agenda Voce nao tem novos assuntos na Agendal Informacoes sobre a conexao Ultimo acesso : 18/07/2022 16:35:26 Acesso Atual: 19/07/2022 07:33:33 Senha expira em: 31/12/3000 4)) POR PTB2 07:36 19/07/2022" Position="-2806, 0" ScreenshotGuid="64a4b9fe-6dc5-4c16-b36a-7ff7c662d31b" ServerVersion="1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
@@ -1113,13 +1116,9 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_23">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="Time">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DateAdd(&quot;m&quot;, -6, Now).ToString(&quot;dd-MM-yyyy&quot;)" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="[DateAdd(&quot;m&quot;, -6, Now).ToString(&quot;dd-MM-yyyy&quot;)]" Name="Time" />
             </Sequence.Variables>
-            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (441,234,202,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Tipo de Processo:' (347,239,89,12)&quot;]" DesignTimeCacheId="fe535fc8-d31c-42aa-8ebe-ae0ec6e7fe90" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="b75711b83c1fcd811f0131756b34a290" Text="[&quot;Todos&quot;]" Version="V5">
+            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (441,234,202,24)&quot; +&#xA;&quot;Anchor: Text 'Tipo de Processo:' (347,239,89,12)&quot;]" DesignTimeCacheId="fe535fc8-d31c-42aa-8ebe-ae0ec6e7fe90" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="b75711b83c1fcd811f0131756b34a290" Text="[&quot;Todos&quot;]" Version="V5">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="71bf18c7-6b15-4ebc-8532-712e84c985fa">
                   <uc:CvDescriptor.Anchors>
@@ -1143,7 +1142,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" Descriptor="[&quot;Target: RadioButton (806,239,16,16)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Analitico' (822,240,43,12)&quot;]" DesignTimeCacheId="fe535fc8-d31c-42aa-8ebe-ae0ec6e7fe90" DesignTimeScaleFactor="1" DisplayName="CV Click - RadioButton" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_13" InformativeScreenshot="fa4987cd21c460674ee3128eef6e2ee9" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" Descriptor="[&quot;Target: RadioButton (806,239,16,16)&quot; +&#xA;&quot;Anchor: Text 'Analitico' (822,240,43,12)&quot;]" DesignTimeCacheId="fe535fc8-d31c-42aa-8ebe-ae0ec6e7fe90" DesignTimeScaleFactor="1" DisplayName="CV Click - RadioButton" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_13" InformativeScreenshot="fa4987cd21c460674ee3128eef6e2ee9" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -1177,7 +1176,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (348,415,15,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Selecionar todos' (364,416,82,12)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Numero do Processo:' (348,447,105,12)&quot;]" DesignTimeCacheId="25f8483f-7848-46b9-b6c4-5dbf17fc5b01" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_1" InformativeScreenshot="64e5121b1a01bb29598728bea40c854f" Version="V5">
+            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (348,415,15,15)&quot; +&#xA;&quot;Anchor: Text 'Selecionar todos' (364,416,82,12)&quot; +&#xA;&quot;Anchor: Text 'Numero do Processo:' (348,447,105,12)&quot;]" DesignTimeCacheId="25f8483f-7848-46b9-b6c4-5dbf17fc5b01" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_1" InformativeScreenshot="64e5121b1a01bb29598728bea40c854f" Version="V5">
               <p:CvCheckWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="2384550a-c7f1-4560-8202-f7aec4f5d2ae">
                   <uc:CvDescriptor.Anchors>
@@ -1192,7 +1191,7 @@
                 </uc:CvDescriptor>
               </p:CvCheckWithDescriptor.DesignTimeDescriptor>
             </p:CvCheckWithDescriptor>
-            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (646,415,15,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Selecionar todos' (661,416,83,11)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Situacao:' (653,438,46,14)&quot;]" DesignTimeCacheId="bd926285-4f5f-46e9-ad5d-385ef22f578e" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_6" InformativeScreenshot="76606389a314c59f41a1e0d12cde2a7d" Version="V5">
+            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (646,415,15,15)&quot; +&#xA;&quot;Anchor: Text 'Selecionar todos' (661,416,83,11)&quot; +&#xA;&quot;Anchor: Text 'Situacao:' (653,438,46,14)&quot;]" DesignTimeCacheId="bd926285-4f5f-46e9-ad5d-385ef22f578e" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_6" InformativeScreenshot="76606389a314c59f41a1e0d12cde2a7d" Version="V5">
               <p:CvCheckWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="47a42fdc-2409-4b56-bfbb-8468b2bdd1ac">
                   <uc:CvDescriptor.Anchors>
@@ -1207,7 +1206,7 @@
                 </uc:CvDescriptor>
               </p:CvCheckWithDescriptor.DesignTimeDescriptor>
             </p:CvCheckWithDescriptor>
-            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (838,462,16,16)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Concluido' (856,462,46,12)&quot;]" DesignTimeCacheId="25f8483f-7848-46b9-b6c4-5dbf17fc5b01" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_2" InformativeScreenshot="7ef88f704cefa1a57780c134fd0ebf76" Version="V5">
+            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (838,462,16,16)&quot; +&#xA;&quot;Anchor: Text 'Concluido' (856,462,46,12)&quot;]" DesignTimeCacheId="25f8483f-7848-46b9-b6c4-5dbf17fc5b01" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_2" InformativeScreenshot="7ef88f704cefa1a57780c134fd0ebf76" Version="V5">
               <p:CvCheckWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="39aa7074-b0fb-4ccc-90a5-d188efdbe081">
                   <uc:CvDescriptor.Anchors>
@@ -1221,7 +1220,7 @@
                 </uc:CvDescriptor>
               </p:CvCheckWithDescriptor.DesignTimeDescriptor>
             </p:CvCheckWithDescriptor>
-            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (838,480,15,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Reprovado' (854,481,54,13)&quot;]" DesignTimeCacheId="5a7640f4-afac-4787-95b4-0141bf05740a" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_5" InformativeScreenshot="5af87c5ec972340c9288b30da4f6a320" Version="V5">
+            <p:CvCheckWithDescriptor InRegion="{x:Null}" Action="Toggle" Descriptor="[&quot;Target: CheckBox (838,480,15,15)&quot; +&#xA;&quot;Anchor: Text 'Reprovado' (854,481,54,13)&quot;]" DesignTimeCacheId="5a7640f4-afac-4787-95b4-0141bf05740a" DesignTimeScaleFactor="1" DisplayName="CV Check - CheckBox" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvCheckWithDescriptor_5" InformativeScreenshot="5af87c5ec972340c9288b30da4f6a320" Version="V5">
               <p:CvCheckWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="6f8255b4-b41d-41b8-8db0-0d144abda3da">
                   <uc:CvDescriptor.Anchors>
@@ -1235,7 +1234,7 @@
                 </uc:CvDescriptor>
               </p:CvCheckWithDescriptor.DesignTimeDescriptor>
             </p:CvCheckWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (459,468,83,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Data da Solicitacao:' (348,472,96,14)&quot;]" DesignTimeCacheId="5a7640f4-afac-4787-95b4-0141bf05740a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="f9274dd66196a787fd7b3472e87589d5" Text="[Time]" Version="V5">
+            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (459,468,83,24)&quot; +&#xA;&quot;Anchor: Text 'Data da Solicitacao:' (348,472,96,14)&quot;]" DesignTimeCacheId="5a7640f4-afac-4787-95b4-0141bf05740a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="f9274dd66196a787fd7b3472e87589d5" Text="[Time]" Version="V5">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="d8303fff-0de6-4fb2-8b88-06a80cc955d5">
                   <uc:CvDescriptor.Anchors>
@@ -1259,7 +1258,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (459,493,83,25)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Data da Conclusao:' (348,498,95,12)&quot;]" DesignTimeCacheId="5a7640f4-afac-4787-95b4-0141bf05740a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="2e853c93d1558105f3640725c2bdef77" Text="[Time]" Version="V5">
+            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (459,493,83,25)&quot; +&#xA;&quot;Anchor: Text 'Data da Conclusao:' (348,498,95,12)&quot;]" DesignTimeCacheId="5a7640f4-afac-4787-95b4-0141bf05740a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="2e853c93d1558105f3640725c2bdef77" Text="[Time]" Version="V5">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="03e2fb33-8b50-4f2f-ade4-081f5ea4bc1f">
                   <uc:CvDescriptor.Anchors>
@@ -1315,10 +1314,13 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="6">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
               <uc:CVCache DisplayName="Screen CV Click - 'Analitico'" Id="fe535fc8-d31c-42aa-8ebe-ae0ec6e7fe90" InformativeScreenshot="c5721a455383cb31fd9a50d37729c5d9" LogicalPosition="-2806, 0" OcrText="NewCon _ X Nev CON Venda Grupo Cobranca Financeiro Contemplacao Credito Encerramento Contabilidade Sistema Movimentacao Utilizacao de FGTS Repasse Financeiro Pagamento Controle Bancario Controle de Caixa Relatorio Relatorios - 19/07/2022 X Financeiro Acompanhamentc Workflow - 19/07/2022 07:38:07 X v Relatorio Tipo de Relatorio X Listagem do Moviment Tipo de Processo: Selecione um Tipo de Processo Sintetico Analitico # Processo # Atividade Selecionar todos Selecionar todos Numero do Processo: 0 Situacao: Pendente Concluido Data da Solicitacao: 01/01/1900 19/07/2022 Aguardando Regularizacao Reprovado Data da Conclusao: 01/01/1900 19/07/2022 Imprimir 4)) POR PTB2 07:39 19/07/2022" Position="-2806, 0" ScreenshotGuid="02727f7b-9f14-42dd-b1c0-e3933d199b20" ServerVersion="1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="16">
@@ -3135,7 +3137,7 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_24">
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (813,165,21,20)&quot; +&#xD;&#xA;&quot;Anchor: Text 'de 0' (400,165,28,13)&quot; +&#xD;&#xA;&quot;Anchor: Icon (787,160,22,22)&quot;]" DesignTimeCacheId="9dae784f-80f2-4e8c-a7d2-079fc914c741" DesignTimeScaleFactor="1" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_17" InformativeScreenshot="c66626edb2519cb8cfc00881c021e5f8" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (813,165,21,20)&quot; +&#xA;&quot;Anchor: Text 'de 0' (400,165,28,13)&quot; +&#xA;&quot;Anchor: Icon (787,160,22,22)&quot;]" DesignTimeCacheId="9dae784f-80f2-4e8c-a7d2-079fc914c741" DesignTimeScaleFactor="1" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_17" InformativeScreenshot="c66626edb2519cb8cfc00881c021e5f8" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -3199,7 +3201,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvClickWithDescriptor DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="360000" Descriptor="[&quot;Target: ArrowButton (845,618,21,26)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Save' (803,624,26,12)&quot;]" DesignTimeCacheId="894ae6ee-cb06-49ac-bfb9-30c68075b004" DesignTimeScaleFactor="1" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_19" InformativeScreenshot="ed8b3c5399b1b9072e43c458184cf262" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+            <p:CvClickWithDescriptor DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="360000" Descriptor="[&quot;Target: ArrowButton (845,618,21,26)&quot; +&#xA;&quot;Anchor: Text 'Save' (803,624,26,12)&quot;]" DesignTimeCacheId="894ae6ee-cb06-49ac-bfb9-30c68075b004" DesignTimeScaleFactor="1" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_19" InformativeScreenshot="ed8b3c5399b1b9072e43c458184cf262" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -3262,7 +3264,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Save' (793,575,26,12)&quot; +&#xD;&#xA;&quot;Anchor: Button (762,569,86,26)&quot; +&#xD;&#xA;&quot;Anchor: Button (711,617,70,27)&quot;]" DesignTimeCacheId="eabed458-f988-409f-a00b-4d101d6fac0d" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_21" InformativeScreenshot="df7af6b854e8c7a9a95e91763b732979" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Save' (793,575,26,12)&quot; +&#xA;&quot;Anchor: Button (762,569,86,26)&quot; +&#xA;&quot;Anchor: Button (711,617,70,27)&quot;]" DesignTimeCacheId="eabed458-f988-409f-a00b-4d101d6fac0d" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_21" InformativeScreenshot="df7af6b854e8c7a9a95e91763b732979" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -3297,7 +3299,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (676,383,69,23)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Yes' (700,388,20,12)&quot;]" DesignTimeCacheId="a96e4bd1-c91e-4315-94cf-1358e9f5be3f" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_22" InformativeScreenshot="5c675946cd37b31ff0b39cd0311dd239" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (676,383,69,23)&quot; +&#xA;&quot;Anchor: Text 'Yes' (700,388,20,12)&quot;]" DesignTimeCacheId="a96e4bd1-c91e-4315-94cf-1358e9f5be3f" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_22" InformativeScreenshot="5c675946cd37b31ff0b39cd0311dd239" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -3334,10 +3336,13 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="16">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="9">
               <uc:CVCache DisplayName="1" Id="9dae784f-80f2-4e8c-a7d2-079fc914c741" InformativeScreenshot="c6d9e309d867e2b939374fdf8e48ca55" LogicalPosition="-2806, 0" OcrText="NewCon - X Nev CON Venda Grupo Cobranca _ X e http://db1report161p.sicre... e SDGrRelatorioAcompanha... X Movimentacao &lt; 0 de 0 &gt; 100% v Financeiro Relato X ^ v Relatorio X Listagem do Movime Numero do Processo Data da Solicitacao Usuario da Solicitacao Tipo de Processo Pro 0000132006 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132007 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI e 0000132008 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132009 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132010 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132011 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132012 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132013 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132014 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132015 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132016 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132017 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132019 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132021 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132022 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI A) &lt; &gt; POR PTB2 07:53 19/07/2022" Position="-2806, 0" ScreenshotGuid="495790ce-69a0-4612-b0bc-a9f63ebe3bfd" ServerVersion="1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
@@ -7082,7 +7087,7 @@
         <InArgument x:TypeArguments="x:Boolean" />
       </p:CVScope.UseLocalServer>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="dc7ddcb2-8b18-478e-995a-056e46168912" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="434,807" sap2010:WorkflowViewState.IdRef="CVScope_9" Version="V5">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="dc7ddcb2-8b18-478e-995a-056e46168912" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="434,767" sap2010:WorkflowViewState.IdRef="CVScope_9" Version="V5">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -7118,7 +7123,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'SDGrRelatorioAcom...' (328,198,115,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Name' (307,170,34,12)&quot;]" DesignTimeCacheId="6ae70b09-e0f2-4e7e-b74a-95597d47d151" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_25" InformativeScreenshot="08345fae6fab34100defeb4ee7330fa2" KeyModifiers="None" MouseButton="BTN_RIGHT" Version="V5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'SDGrRelatorioAcom...' (328,198,115,14)&quot; +&#xA;&quot;Anchor: Text 'Name' (307,170,34,12)&quot;]" DesignTimeCacheId="6ae70b09-e0f2-4e7e-b74a-95597d47d151" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_25" InformativeScreenshot="08345fae6fab34100defeb4ee7330fa2" KeyModifiers="None" MouseButton="BTN_RIGHT" Version="V5">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -7184,10 +7189,13 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="22">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
               <uc:CVCache DisplayName="1" Id="dc7ddcb2-8b18-478e-995a-056e46168912" InformativeScreenshot="f1fc1d80dbeca94daa8c76bc45b0411f" LogicalPosition="-2806, 0" OcrText="NewCon - X Nev CON Venda Grupo Cobranca _ X e http://db1report161p.sicre.. e SDGrRelatorioAcompanha... X Movimentacao &lt; 0 de 0 &gt; 100% v Financeiro Relato X ^ v Relatorio X Listagem do Movime Numero do Processo Data da Solicitacao Usuario da Solicitacao Tipo de Processo Pro 0000132006 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132007 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI e 0000132008 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132009 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132010 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132011 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132012 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132013 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132014 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132015 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132016 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 0000132017 18/07/2022 14:07:03 CONFEDERACAO DAS COOPERATIVAS DO SICREDI Aviso de Contemplacao AVI 00001320 AVI 000013202 SDGrRelatorioAcompanhamentoWorkflow.xlsx couldn't be downloaded. X AVI 000013202 Retry Cancel View downloads AVI A) &lt; &gt; POR PTB2 07:55 19/07/2022" Position="-2806, 0" ScreenshotGuid="88674f6e-6fa5-4ffa-af8c-a836adef6dc2" ServerVersion="1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
@@ -9284,7 +9292,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="d958425d-5c3a-418f-905f-605d83564ccf" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1" />
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="WindowMessages" ScopeIdentifier="d958425d-5c3a-418f-905f-605d83564ccf" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1" />
             <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayMS="120000" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
